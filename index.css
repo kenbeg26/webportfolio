@@ -18,29 +18,57 @@ body {
   font-weight: bold;
 }
 
+#my_portfolio:hover {
+  color: #B8860B;
+}
+
 #johnkenneth {
   color: #B8860B !important;
 }
 
-#my_portfolio:hover {
+#johnkenneth:hover {
+  color: #B8860B; !important;
+}
+
+#begornia {
+  color: white;
+  font-weight: bold;
+}
+
+#begornia:hover {
   color: #B8860B;
 }
+
 
 #full-stacktext {
   color: #B8860B;
 }
 
 #navbars {
-  border: none;
+  border-radius: 50%;
   color: black;
   text-align: center;
   font-size: 20px;
   transition: 0.3s;
   color: white;
+  transition: 0.3s ease;
 }
 
 #navbars:hover {
   color:#B8860B;
+  border: 5px solid;
+  border-radius: 2px;
+}
+
+/*hide navbar on large screens*/
+@media (min-width: 992px) { /* 992px is the lg breakpoint */
+    .navbar .dropdown {
+        display: none;
+    }
+}
+
+span {
+  color: white;
 }
 
 #facebookicon, #linkeinicon, #gitlabicon, #githubicon {
@@ -54,12 +82,13 @@ body {
 
 #typing {
   color: #B8860B;
-  font-size: 2rem;
+  font-size: 3rem; /* Default font size for larger screens */
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid;
   width: 0;
   animation: typing 3s steps(24) infinite, blink 0.5s step-end infinite alternate;
+  /* Make the typing effect fully visible by making the width 100% at the end */
 }
 
 @keyframes typing {
@@ -67,7 +96,7 @@ body {
     width: 0;
   }
   50% {
-    width: 100%;
+    width: 80%;
   }
   100% {
     width: 0;
@@ -79,6 +108,37 @@ body {
     border-color: transparent;
   }
 }
+
+/* Media Queries for Responsive Font Size */
+@media (max-width: 1200px) {
+  #typing {
+    font-size: 2.5rem; /* Slightly smaller font size for medium devices */
+  }
+}
+
+@media (max-width: 992px) {
+  #typing {
+    font-size: 2rem; /* Even smaller font size for tablets and smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  #typing {
+    font-size: 2rem; /* Smaller font size for smaller screens like phones */
+    display: flex;
+    text-align: center;
+    margin-left: 70px;
+    font-weight: bold;
+
+  }
+}
+
+@media (max-width: 576px) {
+  #typing {
+    font-size: 1.2rem; /* Even smaller font size for very small devices */
+  }
+}
+
 
 #tagline {
   text-align: justify;
