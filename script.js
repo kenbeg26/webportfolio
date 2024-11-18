@@ -34,3 +34,25 @@ function validateForm(event) {
     event.preventDefault(); // Prevent the default form submission to allow modal interaction
     return false; // Return false to stop form submission
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const text = "Full-Stack Web Developer";
+  const typingElement = document.getElementById("typing");
+  let index = 0;
+
+  function type() {
+    if (index < text.length) {
+      typingElement.textContent += text[index];
+      index++;
+      setTimeout(type, 100);
+    } else {
+      setTimeout(() => {
+        typingElement.textContent = ""; // Clear text
+        index = 0; // Reset index
+        type(); // Restart typing
+      }, 1000); // Pause before restarting
+    }
+  }
+
+  type();
+});
