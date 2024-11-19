@@ -57,7 +57,7 @@ body {
 #navbars:hover {
   color:#B8860B;
   border: 5px solid;
-  border-radius: 2px;
+  border-radius: 25px;
 }
 
 /*hide navbar on large screens*/
@@ -118,6 +118,22 @@ span {
 
 #portfolioimage:hover {
   box-shadow: 0 0 20px 10px rgba(184, 134, 11, 1); /* Stronger glow on hover */
+}
+
+/* Style for the button */
+.gold-button {
+    background-color: gold;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.gold-button:hover {
+    background-color: darkgoldenrod;
 }
 
 /*Project Section*/

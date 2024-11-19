@@ -56,3 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   type();
 });
+
+// Function to trigger the download with a prompt for confirmation
+function downloadCV() {
+    let userConfirmation = confirm("Do you want to download my CV?");
+    if (userConfirmation) {
+        // Replace 'path/to/your/cv.pdf' with the actual path to your CV file
+        window.location.href = './johnkennethcv.pdf'; 
+    }
+}
